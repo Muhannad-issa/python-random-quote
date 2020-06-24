@@ -1,10 +1,10 @@
 import random
 
 def baby():
-  #print("Keep it logically awesome.")
-
+  
   f = open("quotes.txt")
-  quotes = f.readlines()
+  #quotes = f.readlines()
+  quotes = f.read().splitlines()
   f.close()
   last = 13
   rnd = random.randint(0, last)
