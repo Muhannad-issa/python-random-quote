@@ -2,11 +2,12 @@ import random
 
 def baby():
   
-  f = open("quotes.txt")
+  with open("quotes.txt", 'a') as f:
+    f.write("\nWork smarter not harder")
   #quotes = f.readlines()
+  f = open("quotes.txt")
   quotes = f.read().splitlines()
-  f.close()
-  last = 13
+  last = 15
   rnd = random.randint(0, last)
 
   print(quotes[rnd])
