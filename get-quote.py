@@ -1,13 +1,14 @@
 import random
 
 def baby():
-  
-  with open("quotes.txt", 'a') as f:
-    #f.write("\nWork smarter not harder")
+  add_quotes = ["Wish for others what you wish for yourself", "Love thy neighbor"]
   #quotes = f.readlines()
-    f = open("quotes.txt")
+  f = open("quotes.txt")
   quotes = f.read().splitlines()
-  last = 14
+  quotes.extend(add_quotes)
+  f.close
+  
+  last = 16
   rnd = random.randint(0, last)
 
   print(quotes[rnd])
